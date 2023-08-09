@@ -30,7 +30,7 @@ namespace Unit25_EFTraining
 
                 db.SaveChanges();
                 var Users = UserRepository.GetAllUsers();
-                var Books = BookRepository.GetBookCountByGenre("Science");
+                var Books = BookRepository.GetBookCountByAuthor("Savel'ev");
 
                 Console.WriteLine(Books);
 

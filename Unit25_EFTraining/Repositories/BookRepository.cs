@@ -72,5 +72,10 @@ namespace Unit25_EFTraining.Repositories
             return _context.Books.
                 Where(x => x.Genre == genre).Count();
         }
+        public int GetBookCountByAuthor(string author)
+        {
+            return _context.Books.
+                Where(x => x.Author == author).Count();
+        }
     }
 }
