@@ -11,8 +11,8 @@ namespace Unit25_EFTraining
             {
                 var User1 = new User { Name = "Andrey", Email = "An@mail.com" };
                 var User2 = new User { Name = "Viktor", Email = "Vi@mail.com"};
-                var Book1 = new Book { Name = "Brain", Created = new DateTime(2008, 3, 1)};
-                var Book2 = new Book { Name = "Identy", Created = new DateTime(1992,2,2)};
+                var Book1 = new Book { Name = "Brain", Created = new DateTime(2008, 3, 1), Author = "Savel'ev", Genre = "Science"};
+                var Book2 = new Book { Name = "Identy", Created = new DateTime(1992,2,2), Author = "Engels", Genre = "Politics"};
                 var BookRepository = new BookRepository(db);
                 var UserRepository = new UserRepository(db);
                 UserRepository.AddUser(User1);
