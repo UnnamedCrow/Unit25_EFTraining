@@ -11,5 +11,8 @@ namespace Unit25_EFTraining.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Created { get; set; }
+
+        //внешний ключ 
+        public int UserId { get; set; } = 0;
     }
 }

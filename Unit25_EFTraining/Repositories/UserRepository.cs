@@ -59,5 +59,21 @@ namespace Unit25_EFTraining.Repositories
             }
             return true;
         }
+        public bool TakeBook(User user, Book book)
+        {
+            try
+            {
+                if (book.UserId != 0)
+                    throw new Exception();
+                user.Books.Add(book);
+                book.UserId = user.Id;
+                _context.SaveChanges();
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

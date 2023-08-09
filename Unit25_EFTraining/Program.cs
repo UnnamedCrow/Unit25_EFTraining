@@ -19,22 +19,23 @@ namespace Unit25_EFTraining
                 UserRepository.AddUser(User2);
                 BookRepository.AddBook(Book1);
                 BookRepository.AddBook(Book2);
+                UserRepository.TakeBook(User1, Book2);
+                UserRepository.TakeBook(User1, Book1);
+                UserRepository.TakeBook(User2, Book1);
                 db.SaveChanges();
-                UserRepository.UpdateUserById(1, "Markus");
-                BookRepository.UpdateBookById(1, "2001/1/1");
                 var Users = UserRepository.GetAllUsers();
                 var Books = BookRepository.GetAllBooks();
+
                 foreach (var User in Users)
                 {
                     Console.WriteLine(User.Name);
-                }
-                foreach (var Book in Books)
-                {
-                    Console.WriteLine(Book.Name);
+                    foreach (var Book in User.Books)
+                    {
+                        Console.WriteLine(Book.Name);
+                    }
+                    Console.WriteLine("?????????????");
                 }
 
-                UserRepository.UpdateUserById(1, "Markus");
-                BookRepository.UpdateBookById(1, "Moon");
 
             }
         }
