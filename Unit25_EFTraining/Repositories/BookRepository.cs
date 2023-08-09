@@ -93,5 +93,11 @@ namespace Unit25_EFTraining.Repositories
         { 
             return _context.Books.Where(b => b.Name == name && b.Author == author).FirstOrDefault();
         }
+
+        public List<Book> GetSpecialBookList(string genre, DateTime up, DateTime down)
+        {
+            return _context.Books.Where(b => b.Genre == genre && (b.Created > down) && (b.Created < up)).ToList();
+               
+        }
     }
 }
