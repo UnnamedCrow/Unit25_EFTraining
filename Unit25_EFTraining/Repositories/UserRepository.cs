@@ -75,5 +75,9 @@ namespace Unit25_EFTraining.Repositories
             }
             return true;
         }
+        public int GetUserBooksCount(User user)
+        {
+            return user.Books.Count;
+        }
     }
 }

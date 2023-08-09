@@ -25,14 +25,14 @@ namespace Unit25_EFTraining
                 BookRepository.AddBook(Book4);
                 UserRepository.TakeBook(User1, Book2);
                 UserRepository.TakeBook(User1, Book1);
-                UserRepository.TakeBook(User2, Book3);
+                UserRepository.TakeBook(User1, Book3);
                 UserRepository.TakeBook(User2, Book4);
 
                 db.SaveChanges();
-                var Users = UserRepository.GetAllUsers();
-                var Books = BookRepository.GetBookCountByAuthor("Savel'ev");
+                var Users = UserRepository.GetUserBooksCount(User1);
+                
 
-                Console.WriteLine(Books);
+                Console.WriteLine(Users);
 
 
             }
