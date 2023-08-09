@@ -29,7 +29,7 @@ namespace Unit25_EFTraining
                 UserRepository.TakeBook(User2, Book4);
 
                 db.SaveChanges();
-                var book = BookRepository.GetLastBook();
+                var book = BookRepository.GetBookByNameAndAuthor("Brain", "Savel'ev");
                 Console.WriteLine(book.Name + " - " + book.Author);
                
 
