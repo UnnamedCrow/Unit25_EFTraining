@@ -62,5 +62,10 @@ namespace Unit25_EFTraining.Repositories
             }
             return true;
         }
+        public List<Book> GetListByAuthor(string author)
+        {
+            return _context.Books.
+                Where(x => x.Author == author).ToList();
+        }
     }
 }
