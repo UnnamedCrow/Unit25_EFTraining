@@ -77,5 +77,9 @@ namespace Unit25_EFTraining.Repositories
             return _context.Books.
                 Where(x => x.Author == author).Count();
         }
+        public List<Book> BookListSortedByName()
+        {
+            return _context.Books.OrderBy(x => x.Name).ToList();
+        }
     }
 }

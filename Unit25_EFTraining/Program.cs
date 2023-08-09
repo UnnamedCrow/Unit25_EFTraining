@@ -29,10 +29,12 @@ namespace Unit25_EFTraining
                 UserRepository.TakeBook(User2, Book4);
 
                 db.SaveChanges();
-                var Users = UserRepository.GetUserBooksCount(User1);
-                
+                var books = BookRepository.BookListSortedByName();
 
-                Console.WriteLine(Users);
+                foreach(var book in books)
+                {
+                    Console.WriteLine(book.Name);   
+                }
 
 
             }
