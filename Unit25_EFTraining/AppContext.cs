@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unit25_EFTraining.Entities;
 
 namespace Unit25_EFTraining
 {
@@ -15,6 +16,7 @@ namespace Unit25_EFTraining
         public DbSet<Book> Books { get; set; }
         public AppContext()
         {
+            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Unit25_EFTraining
+namespace Unit25_EFTraining.Entities
 {
     public class Book
     {
