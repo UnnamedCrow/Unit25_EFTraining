@@ -29,12 +29,8 @@ namespace Unit25_EFTraining
                 UserRepository.TakeBook(User2, Book4);
 
                 db.SaveChanges();
-                var books = BookRepository.BookListSortedByDate();
-
-                foreach(var book in books)
-                {
-                    Console.WriteLine(book.Created);   
-                }
+                Console.WriteLine(UserRepository.DoUserTakeBook(User2, Book1));
+                Console.WriteLine(UserRepository.DoUserTakeBook(User2, Book4));
 
 
             }

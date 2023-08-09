@@ -79,5 +79,10 @@ namespace Unit25_EFTraining.Repositories
         {
             return user.Books.Count;
         }
+
+        public bool DoUserTakeBook(User user, Book book)
+        {
+            return user.Books.Contains(book);
+        }
     }
 }
