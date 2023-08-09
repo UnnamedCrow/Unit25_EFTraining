@@ -86,5 +86,9 @@ namespace Unit25_EFTraining.Repositories
             return _context.Books.OrderByDescending(x => x.Created).ToList();
         }
 
+        public Book GetLastBook()
+        {
+            return BookListSortedByDate().First();
+        }
     }
 }

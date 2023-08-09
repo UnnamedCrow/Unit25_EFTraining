@@ -29,8 +29,9 @@ namespace Unit25_EFTraining
                 UserRepository.TakeBook(User2, Book4);
 
                 db.SaveChanges();
-                Console.WriteLine(UserRepository.DoUserTakeBook(User2, Book1));
-                Console.WriteLine(UserRepository.DoUserTakeBook(User2, Book4));
+                var book = BookRepository.GetLastBook();
+                Console.WriteLine(book.Name + " - " + book.Author);
+               
 
 
             }
