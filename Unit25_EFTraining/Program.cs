@@ -29,11 +29,11 @@ namespace Unit25_EFTraining
                 UserRepository.TakeBook(User2, Book4);
 
                 db.SaveChanges();
-                var books = BookRepository.BookListSortedByName();
+                var books = BookRepository.BookListSortedByDate();
 
                 foreach(var book in books)
                 {
-                    Console.WriteLine(book.Name);   
+                    Console.WriteLine(book.Created);   
                 }
 
 
